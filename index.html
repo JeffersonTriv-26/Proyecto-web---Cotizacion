@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotización - Grupo J&J System SAC</title>
+  <link rel="stylesheet" href="css/style-principal.css">
+</head>
+<body>
+  <div id="cotizacion" class="cotizacion">
+    <!-- Encabezado -->
+    <div class="encabezado">
+      <img src="img/logo-empresa-grupojj.png" alt="Logo Empresa" class="logo-empresa">
+      <div class="datos-empresa">
+        <h1>GRUPO J&J SYSTEM SAC</h1>
+        <p>RUC: 20613796810</p>
+        <p>ventas@grupojjsystem.com</p>
+      </div>
+      <div class="datos-cotizacion">
+        <p><strong>Cotización N°:</strong> <span id="numero-cotizacion"></span></p>
+        <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+      </div>
+    </div>
+
+    <!-- Datos del   cliente -->
+    <div class="cliente">
+      <label for="nombre-cliente">Cliente:</label>
+      <input type="text" id="nombre-cliente" placeholder="Nombre del cliente">
+    </div>
+
+    <!-- Formulario de items -->
+    <div class="formulario">
+      <input type="text" id="producto" placeholder="Descripción del producto">
+      <input type="number" id="cantidad" placeholder="Cantidad">
+      <input type="number" id="precio" placeholder="Precio Unitario">
+      <button onclick="agregarProducto()">➕ Agregar</button>
+    </div>
+
+    <!-- Tabla de productos -->
+    <table id="tabla-productos">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Descripción</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Subtotal</th>
+          <th class="acciones-col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Total -->
+    <div class="total">
+      <strong>Total: S/ <span id="total">0.00</span></strong>
+    </div>
+
+    <!-- Cuentas -->
+    <div class="cuentas">
+      <div class="columna">
+        <img src="img/logo-bcp.png" alt="Logo BCP" class="logo-banco">
+        <p><strong>Nº- SOLES</strong><br>1917120736024</p>
+        <p><strong>Nº- SOLES INTERBANCARIO</strong><br>00219100712073602450</p>
+        <p><strong>Nº- DÓLARES</strong><br>1917122575110</p>
+      </div>
+      <div class="columna">
+        <img src="img/logo-interbank.png" alt="Logo Interbank" class="logo-banco">
+        <p><strong>Nº- SOLES</strong><br>200-3007014978</p>
+        <p><strong>Nº- SOLES INTERBANCARIO</strong><br>003-200-003007014978-33</p>
+      </div>
+      <div class="columna">
+        <img src="img/logo-yape.png" alt="Logo Yape" class="logo-banco">
+        <img src="img/qr-yape.png" alt="QR Yape" class="qr-yape">
+      </div>
+    </div>
+
+    <!-- Importante -->
+    <div class="importante">
+      <p>
+        <strong>Importante:</strong> Todos los pagos deben realizarse a nombre de GRUPO J&J SYSTEM SAC. Verifique el nombre antes de pagar.<br>
+        Ventas: 996-063-200 / 986-540-228 – Soporte: 987-492-959 / 924-854-671<br>
+        Ubícanos: JR. Leticia 937 Int 10 - Lima, Lima, Lima (Ref. Altura de la cuadra 13 de Paruro)
+      </p>
+    </div>
+  </div>
+
+  <!-- Acciones -->
+  <div class="acciones">
+    <button id="btn-pdf" onclick="descargarPDF()">📄 Generar PDF</button>
+    <button onclick="window.print()">🖨️ Imprimir</button>
+    <button onclick="limpiarCotizacion()">🗑️ Limpiar</button>
+    <button onclick="enviarWhatsApp()">📲 WhatsApp</button>
+  </div>
+
+  <!-- Librerías externas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- JS principal -->
+  <script src="js/javaScritp-principal.js"></script>
+</body>
+</html>
