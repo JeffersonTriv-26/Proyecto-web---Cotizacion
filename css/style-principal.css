@@ -49,23 +49,26 @@ body {
   margin: 2px 0;
 }
 
-/* ===== Datos cliente ===== */
 .datos-cliente {
   margin-bottom: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
   align-items: center;
 }
 
 .datos-cliente label {
   font-weight: bold;
+  display: block;
+  margin-bottom: 2px;
 }
 
 .datos-cliente input {
+  width: 100%;
   padding: 6px 10px;
   border: 1px solid #bbb;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 /* ===== Tabla productos ===== */
@@ -191,6 +194,7 @@ tbody td:first-child {
   border: 1px solid #e0c200;
   font-size: 14px;
   line-height: 1.4;
+  text-align: center;
 }
 
 /* ===== Estilos impresión ===== */
