@@ -49,18 +49,22 @@ body {
   margin: 2px 0;
 }
 
+/* ===== Datos Clientes ===== */
+
 .datos-cliente {
   margin-bottom: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   align-items: center;
+  
 }
 
 .datos-cliente label {
   font-weight: bold;
   display: block;
   margin-bottom: 2px;
+
 }
 
 .datos-cliente input {
@@ -69,6 +73,7 @@ body {
   border: 1px solid #bbb;
   border-radius: 4px;
   font-size: 14px;
+  
 }
 
 /* ===== Tabla productos ===== */
